@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>IA Fichier Pro - Gemma 2B</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="/static/logo.png" alt="Logo" width="120">
+    <h1>IA Fichier Pro</h1>
+    <p>Utilisations restantes : {{ 3 - uses }}/3</p>
+    <form method="post">
+      <textarea name="prompt" placeholder="Posez votre question..." required></textarea><br>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    {% if answer %}
+    <div class="response">
+      <h2>Réponse :</h2>
+      <p>{{ answer }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
